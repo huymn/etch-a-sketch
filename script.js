@@ -33,8 +33,13 @@ newGridButton.addEventListener("click", () => {
       const squares = document.querySelectorAll(".row div");
 
       squares.forEach((square) => {
-        square.addEventListener("mouseover", () => {
-          square.classList.add("highlight");
+        square.get;
+        square.addEventListener("mouseover", (e) => {
+          const randomRValue = Math.floor(Math.random() * 256);
+          const randomGValue = Math.floor(Math.random() * 256);
+          const randomBValue = Math.floor(Math.random() * 256);
+
+          square.style.backgroundColor = `rgb(${randomRValue}, ${randomGValue}, ${randomBValue})`;
         });
       });
     }
