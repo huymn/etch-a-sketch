@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-grow: 0;
+}
+
+.row div {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+}
+
+.highlight {
+  background-color: black;
+}

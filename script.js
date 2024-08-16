@@ -11,3 +11,11 @@ for (let i = 0; i < 16; i++) {
 
   containerDiv.appendChild(newRow);
 }
+
+const squares = document.querySelectorAll(".row div");
+
+squares.forEach((square) => {
+  square.addEventListener("mouseover", () => {
+    square.classList.add("highlight");
+  });
+});
