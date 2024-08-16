@@ -15,7 +15,7 @@ newGridButton.addEventListener("click", () => {
   if (gridLength > 100 || gridLength < 1) {
     alert("Invalid grid size. Must be between 1 and 100");
   } else {
-    const heightAndWidthSize = CONTAINER_SIZE / gridLength;
+    const squareSize = CONTAINER_SIZE / gridLength;
 
     // Draw the grid
     for (let i = 0; i < gridLength; i++) {
@@ -23,9 +23,8 @@ newGridButton.addEventListener("click", () => {
       newRow.classList.add("row");
       for (let j = 0; j < gridLength; j++) {
         const newSquare = document.createElement("div");
-        newSquare.style.width = `${heightAndWidthSize}px`;
-        newSquare.style.height = `${heightAndWidthSize}px`;
-        newSquare.style.border = "1px solid black";
+        newSquare.style.width = `${squareSize}px`;
+        newSquare.style.height = `${squareSize}px`;
         newRow.appendChild(newSquare);
       }
 
