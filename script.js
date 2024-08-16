@@ -1,11 +1,20 @@
+const CONTAINER_SIZE = 650;
+
 const containerDiv = document.querySelector(".container");
 
+const gridLength = 16;
+
+const heightAndWidthSize = CONTAINER_SIZE / gridLength;
+
 // Draw the grid
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < gridLength; i++) {
   const newRow = document.createElement("div");
   newRow.classList.add("row");
-  for (let j = 0; j < 16; j++) {
+  for (let j = 0; j < gridLength; j++) {
     const newSquare = document.createElement("div");
+    newSquare.style.width = `${heightAndWidthSize}px`;
+    newSquare.style.height = `${heightAndWidthSize}px`;
+    newSquare.style.border = "1px solid black";
     newRow.appendChild(newSquare);
   }
 
